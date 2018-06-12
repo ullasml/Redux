@@ -23,6 +23,8 @@
 
 **Ease of testing **:The first rule of writing testable code is to write small functions that do only one thing and that are independent. Redux’s code is mostly functions that are just that: small, pure and isolated.
 
+**Unidirectional data flow **:Apps that implement multidirectional data flow can be very hard to read and debug. One change can lead to a cascade of events that send data around the program. Unidirectional flow is more predictable and greatly reduces the cognitive load needed to read the code.
+
 # Summary #
 
 * You get a clearer, declarative code blocks with this structure. Your actions describe every single way the state of the application can be changed. If you follow the pattern well, there is no function that performs any side effect, there’s no other place where someone could inject a piece of code that is hard to track down — there’s just these list of actions. It doesn’t matter how many there are and they clearly describe which mutations can happen.
@@ -76,7 +78,7 @@ Store — contains the state, receives actions, uses the Reducer to replac
 
 * They don’t manage their own state in any capacity.
 
-## **Action Creators/Sagas** ##
+## **Action Creators/Sagas/ Middleware** ##
 
 * They are the middleware library that handles side effects in your redux app.
 
